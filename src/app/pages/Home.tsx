@@ -8,7 +8,7 @@ export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden py-20 md:py-0">
         <div className="absolute inset-0">
           <img
             src={heroBg}
@@ -20,24 +20,24 @@ export function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="flex items-center justify-center gap-2 mb-6 animate-fade-in-up">
-            <Building2 className="w-8 h-8 animate-float" />
-            <span className="text-2xl font-semibold">SaiRag Engineering LLP</span>
+            <Building2 className="w-6 h-6 md:w-8 md:h-8 animate-float" />
+            <span className="text-xl md:text-2xl font-semibold">SaiRag Engineering LLP</span>
           </div>
-          <h1 className="text-5xl md:text-6xl mb-6 animate-fade-in-up delay-200">SaiRag Engineering LLP</h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-in-up delay-300">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 animate-fade-in-up delay-200 leading-tight">SaiRag Engineering LLP</h1>
+          <p className="text-lg md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-in-up delay-300 px-4">
             Advanced Façade Engineering & Mechanical Design Solutions — Delivering precision-driven façade design, detailing, CAD/BIM, and mechanical engineering support for global projects.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400 px-4">
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-xl w-full sm:w-auto"
             >
               About Us
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 btn-glass text-white px-8 py-3 rounded-lg"
+              className="inline-flex items-center justify-center gap-2 btn-glass text-white px-8 py-3 rounded-lg w-full sm:w-auto"
             >
               Our Services
             </Link>
@@ -46,28 +46,28 @@ export function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="animate-fade-in-up">
-              <h2 className="text-4xl mb-6">Engineering Precision, Delivered Globally</h2>
-              <p className="text-muted-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl mb-6 leading-tight">Engineering Precision, Delivered Globally</h2>
+              <p className="text-muted-foreground mb-4 text-sm md:text-base">
                 SaiRag Engineering LLP is a Pune-based engineering services company specialized in façade engineering and mechanical design solutions. We partner with global clients to deliver high-quality design, detailing, and CAD/BIM support with a strong focus on precision, efficiency, and international engineering standards.
               </p>
-              <div className="grid grid-cols-3 gap-6 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
                   { number: "2023", label: "Year Founded" },
                   { number: "26+", label: "Projects Delivered" },
                   { number: "49,000+", label: "Engineering Hours" },
                 ].map((stat, i) => (
-                  <div key={i} className="text-center animate-fade-in-up" style={{ animationDelay: `${400 + i * 150}ms` }}>
-                    <div className="text-4xl font-bold text-primary mb-1">{stat.number}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div key={i} className="text-center animate-fade-in-up bg-primary/5 rounded-xl py-6 sm:bg-transparent sm:p-0" style={{ animationDelay: `${400 + i * 150}ms` }}>
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.number}</div>
+                    <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden image-zoom animate-fade-in-up delay-300">
+            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden image-zoom animate-fade-in-up delay-300">
               <img
                 src="https://images.unsplash.com/photo-1776617130019-361f70f3c703?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                 alt="Façade engineering"
@@ -79,7 +79,7 @@ export function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1776617130019-361f70f3c703?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
@@ -90,14 +90,14 @@ export function Home() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl mb-4">What We Do</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-10 md:mb-12 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl mb-4">What We Do</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
               Comprehensive engineering solutions for façade and mechanical design
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
                 num: "01",
@@ -125,9 +125,9 @@ export function Home() {
                 className="glass-card rounded-lg p-6 animate-fade-in-up"
                 style={{ animationDelay: `${200 + i * 150}ms` }}
               >
-                <div className="text-4xl text-primary/20 mb-4">{service.num}</div>
-                <h3 className="text-xl mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm">
+                <div className="text-4xl text-primary/20 mb-4 font-bold">{service.num}</div>
+                <h3 className="text-xl mb-3 font-semibold">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.desc}
                 </p>
               </div>
@@ -137,7 +137,7 @@ export function Home() {
           <div className="text-center animate-fade-in">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 text-primary hover:underline group"
+              className="inline-flex items-center gap-2 text-primary hover:underline group font-medium"
             >
               View All Services
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -147,12 +147,12 @@ export function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="animate-fade-in-up">
-              <h2 className="text-4xl mb-6">Contact Us</h2>
-              <p className="text-muted-foreground mb-8">
+              <h2 className="text-3xl md:text-4xl mb-4 md:mb-6">Contact Us</h2>
+              <p className="text-muted-foreground mb-8 text-sm md:text-base">
                 Get in touch with our team for your engineering needs
               </p>
 
@@ -163,18 +163,18 @@ export function Home() {
                   { icon: MapPin, title: "Office Address", detail: "F102, Mahindra Royale Society,\nNehru Nagar, Pimpri,\nPune - 411018, India" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4 animate-fade-in-up" style={{ animationDelay: `${200 + i * 150}ms` }}>
-                    <div className="w-12 h-12 rounded-full glass flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-primary" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="mb-1">{item.title}</h4>
-                      <p className="text-muted-foreground whitespace-pre-line">{item.detail}</p>
+                      <h4 className="mb-1 font-semibold">{item.title}</h4>
+                      <p className="text-muted-foreground text-sm md:text-base whitespace-pre-line leading-relaxed">{item.detail}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden image-zoom animate-fade-in-up delay-300">
+            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden image-zoom animate-fade-in-up delay-300">
               <img
                 src={officeImg}
                 alt="Office location"
@@ -186,7 +186,7 @@ export function Home() {
       </section>
 
       {/* Follow Us Section */}
-      <section className="relative py-20 text-center overflow-hidden">
+      <section className="relative py-16 md:py-20 text-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1776941251083-caddb016c90f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
@@ -196,9 +196,9 @@ export function Home() {
           <div className="absolute inset-0 hero-overlay"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-card-dark inline-block px-12 py-10 rounded-2xl animate-fade-in-up">
-            <h2 className="text-4xl mb-6 text-white">Follow Us</h2>
-            <p className="text-xl text-white/80 mb-8">
+          <div className="glass-card-dark inline-block px-8 py-10 md:px-12 md:py-12 rounded-2xl animate-fade-in-up w-full max-w-lg">
+            <h2 className="text-3xl md:text-4xl mb-4 md:mb-6 text-white">Follow Us</h2>
+            <p className="text-lg md:text-xl text-white/80 mb-0">
               Coming soon.
             </p>
           </div>
